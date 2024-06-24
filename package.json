@@ -1,0 +1,23 @@
+{
+  "name": "cmscachievments",
+  "version": "1.0.0",
+  "description": "Achievements tracker for the staff at the Christa McAuliffe Space Center.",
+  "main": "index.js",
+  "scripts": {
+    "initialize": "node dbInit.js",
+    "start": "node index.js"
+  },
+  "author": "Brian Dean Ullery",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-ejs-layouts": "^2.5.1",
+    "path": "^0.12.7",
+    "sharp": "^0.33.4",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "prettier-plugin-ejs": "^1.0.3"
+  }
+}

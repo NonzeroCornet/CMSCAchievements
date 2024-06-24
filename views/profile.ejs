@@ -1,0 +1,40 @@
+<section class="profile">
+  <div class="profile-picture">
+    <img src="/user/<%= user.id %>.webp" alt="<%= user.username %>" />
+  </div>
+  <div class="profile-info">
+    <div>
+      <h1 class="username"><%= user.username %></h1>
+      <button id="grantAchievementBtn" class="btn">Witness Achievement</button>
+    </div>
+    <div class="progress-container">
+      <h1 class="trophy">🏆</h1>
+      <progress value="<%= user.achievements.length %>" max="49"></progress>
+      <h1>
+        <%= Math.round(user.achievements.length*100/49) %>% (<%= user.achievements.length %>/49)
+      </h1>
+    </div>
+  </div>
+</section>
+<section class="achievements">
+  <h2>Achievements</h2>
+  <div class="responsive-achievements">
+    <% user.achievements.forEach(achievement => { %>
+    <div class="achievement">
+      <p class="achievement-notes">
+        <span class="left-quote">“</span>
+        <%= achievement.notes %>
+        <span class="right-quote">„</span>
+      </p>
+      <div class="achievement-description">
+        <img
+          src="https://emojicdn.elk.sh/<%= achievement.name %>?style=google"
+          alt="<%= achievement.name %>"
+        />
+        <p><%= achievement.date %></p>
+        <p><%= achievement.description %></p>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+</section>

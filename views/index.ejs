@@ -1,0 +1,10 @@
+<section class="other-profiles">
+  <div class="profile-list">
+    <% users.forEach(user => { %>
+    <div class="profile-card">
+      <img src="/user/<%= user.id %>.webp" alt="<%= user.username %>" />
+      <p><a href="/profile/<%= user.id %>"><%= user.username %></a></p>
+    </div>
+    <% }) %>
+  </div>
+</section>
