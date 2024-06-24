@@ -21,7 +21,7 @@
   ],
   "theme_color": "#1b2838",
   "background_color": "#1b2838",
-  "start_url": "/CMSCAchievementsApp/",
+  "start_url": "/CMSCAchievements/",
   "display": "standalone",
   "orientation": "portrait"
 }
