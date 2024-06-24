@@ -25,7 +25,9 @@ window.onload = async function () {
 async function connect() {
   const ip = document.getElementById("ipInput").value;
   const port = document.getElementById("portInput").value;
-  const useHttps = document.getElementById("httpsCheckbox").checked;
+  const useHttps = document.getElementById("httpsCheckbox").disabled
+    ? true
+    : document.getElementById("httpsCheckbox").checked;
   const statusElement = document.getElementById("status");
   const connectButton = document.getElementById("connectButton");
 
