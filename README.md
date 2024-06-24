@@ -24,27 +24,14 @@ Welcome to the Staff Achievements App! This progressive web application allows y
 - A modern web browser
 - Server details (IP address and port)
 
-### Installation
-
-1. Clone the repository:
-
-   ```
-   git clone https://github.com/yourusername/staff-achievements-app.git
-   cd staff-achievements-app
-   ```
-
-2. Open `index.html` in your web browser.
-
-3. To deploy, upload all files to your web server.
-
-Or just visit https://nonzerocornet.github.io/CMSCAchievementsApp/
-
 ## 🖥 Usage
 
 1. Open the app in your web browser.
 2. Enter the server IP address and port number.
 3. Toggle the "Use HTTPS" option if needed.
 4. Click "Connect" to launch into the world of achievements!
+
+Or just visit https://nonzerocornet.github.io/CMSCAchievements/
 
 ## 👩‍💻 Development
 
