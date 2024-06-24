@@ -21,19 +21,19 @@
   ],
   "screenshots": [
     {
-      "src": "screenshot-wide.png",
+      "src": "./assets/screenshot-wide.png",
       "sizes": "1680x1050",
       "type": "image/png",
       "form_factor": "wide"
     },
     {
-      "src": "screenshot-narrow.png",
+      "src": "./assets/screenshot-narrow.png",
       "sizes": "720x1078",
       "type": "image/png",
       "form_factor": "narrow"
     },
     {
-      "src": "screenshot.png",
+      "src": "./assets/screenshot.png",
       "sizes": "800x600",
       "type": "image/png"
     }
