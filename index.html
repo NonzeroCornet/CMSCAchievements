@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Staff Achievements</title>
+
+    <link rel="stylesheet" href="./index.css" />
+    <link rel="icon" href="./assets/icon-192.png" />
+    <link rel="manifest" href="./manifest.json" />
+
+    <script src="./dexie.min.js"></script>
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker.register("./sw.js");
+        });
+      }
+    </script>
+    <script src="./index.js" defer></script>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="input-container">
+        <h1>Connect to Server</h1>
+        <input type="text" id="ipInput" placeholder="IP Address" />
+        <input type="text" id="portInput" placeholder="Port" />
+        <div class="checkbox-container">
+          <input type="checkbox" id="httpsCheckbox" checked />
+          <label for="httpsCheckbox">Use HTTPS</label>
+        </div>
+        <button onclick="connect()" id="connectButton">Connect</button>
+        <div id="status"></div>
+      </div>
+      <iframe id="serverFrame" src="about:blank"></iframe>
+    </div>
+  </body>
+</html>

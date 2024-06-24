@@ -1,0 +1,80 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: Arial, sans-serif;
+  background-color: #1b2838;
+  color: #c7d5e0;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: #2a475e;
+  flex-grow: 1;
+}
+h1 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #66c0f4;
+}
+input[type="text"] {
+  width: 80%;
+  max-width: 300px;
+  padding: 12px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 4px;
+  background-color: #3f5979;
+  color: #c7d5e0;
+  font-size: 16px;
+}
+.checkbox-container {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+}
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+button {
+  width: 80%;
+  max-width: 300px;
+  padding: 12px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 4px;
+  background-color: #66c0f4;
+  color: #1b2838;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+button:hover:not(:disabled) {
+  background-color: #7cd3ff;
+}
+button:disabled {
+  background-color: #4a5f73;
+  cursor: not-allowed;
+}
+iframe {
+  display: none;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+#status {
+  margin-top: 10px;
+  text-align: center;
+  color: #66c0f4;
+}
