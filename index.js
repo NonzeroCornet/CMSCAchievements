@@ -164,6 +164,16 @@ getUsersWithAchievements((err, out) => {
   }
 });
 
+const customCors = (req, res, next) => {
+  if (req.method === "HEAD") {
+    res.setHeader("Access-Control-Allow-Origin", "*");
+    res.setHeader("Access-Control-Allow-Headers", "X-Identifier");
+    res.setHeader("Access-Control-Expose-Headers", "X-Identifier");
+  }
+  next();
+};
+
+app.use(customCors);
 app.use(bodyParser.json({ limit: "25mb" }));
 app.use(
   bodyParser.urlencoded({
@@ -179,7 +189,8 @@ app.set("layout", "layout");
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res) => {
-  res.render("index", { users, title: "Home" });
+  res.set("X-Identifier", "e3848c91-3882-4b5a-bd8a-798888c8cd2a");
+  res.render("index", { users });
 });
 
 app.get("/profile/:id", (req, res) => {
